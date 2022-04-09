@@ -11,6 +11,7 @@ const {
 } = require('./utils/middlewares/errorHandler');
 const notFoundHandler = require('./utils/middlewares/notFoundHandler');
 const hotelsAPI = require('./routes/hotels.routes');
+const path = require('path');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(helmet());
 app.use(express.json());
 app.use(cors());
 app.use(morgan('dev'));
+app.use('/static', express.static(path.join(__dirname, './public/images')));
 
 hotelsAPI(app);
 
