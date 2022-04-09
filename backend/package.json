@@ -1,0 +1,34 @@
+{
+  "name": "backend_aviatour",
+  "version": "1.0.0",
+  "description": "backend aviatur",
+  "main": "index.js",
+  "scripts": {
+    "dev": "set DEBUG=app:* && set NODE_ENV=development && nodemon index",
+    "start": "set NODE_ENV=production && node index",
+    "test": "mocha --exit",
+    "cover": "nyc npm run test",
+    "report": "nyc report --reporter=html && start coverage/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/backDAJG/backend_aviatour.git"
+  },
+  "author": "Alejandro Jerez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/backDAJG/backend_aviatour/issues"
+  },
+  "homepage": "https://github.com/backDAJG/backend_aviatour#readme",
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "helmet": "^5.0.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
